@@ -1,13 +1,22 @@
 import { sql } from './db.js'
 
-sql`
-    CREATE TABLE operacoes (
-        Date 
-        Open
-        High
-        Low
-        'Close*'
-        'Adj Close**'
-        Volume
-    )
-`
+(async () => {
+  try {
+    await sql`
+      CREATE TABLE IF NOT EXISTS operacoes (
+        StoreID INT PRIMARY KEY,
+        AreaStore VARCHAR(255),
+        Property VARCHAR(255),
+        Type VARCHAR(255),
+        Old_New VARCHAR(255),
+        CheckoutNumber VARCHAR(255),
+        Revenue VARCHAR(255)
+      );
+    `;
+    console.log('Tabela criada com sucesso!');
+  } catch (err) {
+    console.error('Erro ao criar a tabela:', err);
+  } finally {
+    await sql.end();
+  }
+})();

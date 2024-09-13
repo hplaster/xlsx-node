@@ -1,10 +1,10 @@
 import 'dotenv/config';
 import postgres from 'postgres';
 
-const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
+let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
 PGPASSWORD = decodeURIComponent(PGPASSWORD);
 
-const sql = postgres({
+export const sql = postgres({
   host: PGHOST,
   database: PGDATABASE,
   username: PGUSER,
@@ -15,5 +15,3 @@ const sql = postgres({
     options: `project=${ENDPOINT_ID}`,
   },
 });
-
-export default sql;
