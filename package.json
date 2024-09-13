@@ -1,0 +1,19 @@
+{
+  "name": "xlsx-node",
+  "version": "1.0.0",
+  "description": "Treinando tratamento de documentos e tabelas com NODEJS",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Knaak",
+  "license": "ISC",
+  "dependencies": {
+    "postgres": "^3.4.4",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
