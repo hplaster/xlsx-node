@@ -10,8 +10,8 @@ export class DatabasePostgres {
             transacao = await sql`SELECT * FROM yahoo_transacoes WHERE Date ILIKE ${'%'+search+'%'}`
         } else {
                 */transacao = await sql`SELECT * FROM yahoo_transacoes`/*
-        }
-        console.log(transacao)*/
+        }*/
+        console.log(transacao)
         return transacao
     }
 
@@ -28,5 +28,9 @@ export class DatabasePostgres {
 
     async delete(id) {
         
+    }
+
+    async createTeste(nome) {
+        await sql`INSERT INTO teste ( nome ) VALUES ( ${nome} )`
     }
 }

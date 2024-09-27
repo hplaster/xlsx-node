@@ -3,7 +3,7 @@ import { DatabasePostgres } from './database-postgres.js';
 //import csv from 'csv-parser';
 
 const database = new DatabasePostgres()
-
+/*
 const file = reader.readFile('./planilha_reduzida.xlsx');
 const sheets = file.SheetNames;
 
@@ -20,10 +20,13 @@ for (let i = 0; i < sheets.length; i++) {
         console.log(res.Close)
         console.log(res.AdjClose)
         console.log(res.Volume)*/
-        await database.create(res.Date, res.Open, res.High, res.Low, res.Close, res.AdjClose, res.Volume)
+/*        await database.create(res.Date, res.Open, res.High, res.Low, res.Close, res.AdjClose, res.Volume)
         //console.log(contador)
     })
-}
+}*/
 
 
 //console.log(database.list())
+await database.createTeste("seila4")
+await database.createTeste("seila5")
+await database.createTeste("seila-oRetorno2")

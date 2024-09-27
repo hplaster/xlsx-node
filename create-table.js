@@ -1,16 +1,17 @@
 import { sql } from './db.js'
-/*
+
 (async () => {
   try {
     await sql`
-      CREATE TABLE IF NOT EXISTS operacoes (
-        StoreID INT PRIMARY KEY,
-        AreaStore VARCHAR(255),
-        Property VARCHAR(255),
-        Type VARCHAR(255),
-        Old_New VARCHAR(255),
-        CheckoutNumber VARCHAR(255),
-        Revenue VARCHAR(255)
+      CREATE TABLE IF NOT EXISTS teste (
+        StoreID SERIAL,
+        nome VARCHAR(255)
+        -- AreaStore VARCHAR(255),
+        -- Property VARCHAR(255),
+        -- Type VARCHAR(255),
+        -- Old_New VARCHAR(255),
+        -- CheckoutNumber VARCHAR(255),
+        -- Revenue VARCHAR(255)
       );
     `;
     console.log('Tabela criada com sucesso!');
@@ -20,7 +21,7 @@ import { sql } from './db.js'
     await sql.end();
   }
 })();
-*/
+
 (async () => {
   try {
     await sql`
